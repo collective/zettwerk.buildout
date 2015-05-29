@@ -4,21 +4,19 @@ Enhanced template buildout configurations for development and deployment.
 # Features
 
 * Included batteries
-** plone.api
-** bobtemptlates.plone
-** Products.PrintingMailhost
-** Products.PDBDebugMode
-** collective.profiler
-** zettwerk.i18nduder
-** fabric
-** collective.xmltestreport
-** missingbits (adapted to work with current buildout versions)
-** mr.developer enabled
-** collective.recipe.omelette
-** plone.reload
+ * plone.api
+ * bobtemptlates.plone
+ * Products.PrintingMailhost
+ * Products.PDBDebugMode
+ * collective.profiler
+ * zettwerk.i18nduder
+ * fabric
+ * collective.xmltestreport
+ * missingbits (adapted to work with current buildout versions)
+ * mr.developer enabled
+ * collective.recipe.omelette
+ * plone.reload
 
-todo: zest.releaser
-todo: code quality stuff
 
 # Structure
 
@@ -26,24 +24,28 @@ One neat thing in this buildout templates is the possiblilty to change the numbe
 
 # Example: Development environment
 
-* Export or clone the Repository to your local filesystem
-> git clone git@github.com:collective/zettwerk.buildout.git
-> cd zettwerk.buildout
+Export or clone the Repository to your local filesystem
 
-* enable virtualenv and install zc.buildout (we are not using bootstrap any more, see https://community.plone.org/t/not-using-bootstrap-py-as-default/620)
-> virtualenv .
-> ./bin/pip install zc.buildout
+    git clone git@github.com:collective/zettwerk.buildout.git
+    cd zettwerk.buildout
 
-# run bootstrap with the develop.cfg
-> ./bin/buildout -c develop.cfg
+Enable virtualenv and install zc.buildout (we are not using bootstrap any more, see https://community.plone.org/t/not-using-bootstrap-py-as-default/620)
+
+    virtualenv .
+    ./bin/pip install zc.buildout
+
+Run bootstrap with the develop.cfg
+
+    ./bin/buildout -c develop.cfg
 
 
-# Example: Deployment with single instance
+# Example: Deployment with a single instance
 
 * copy deploy-single.cfg to deploy.cfg
-* make edits if needed
+* change it as you need
 * change fabfile as you need
 * deploy via ./bin/fabric deploy_something
+
 
 # Example: Deployment with multiple instances
 
@@ -51,3 +53,8 @@ One neat thing in this buildout templates is the possiblilty to change the numbe
 * change the number of instances if needed
 * change fabfile as you need
 * deploy via ./bin/fabric deploy_something
+
+
+# Todos:
+* zest.releaser
+* code quality stuff
