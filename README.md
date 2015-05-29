@@ -19,9 +19,10 @@ Enhanced template buildout configurations for development and deployment.
 
 todo: zest.releaser
 todo: code quality stuff
-todo: pdbdebugmode
 
 # Structure
+
+One neat thing in this buildout templates is the possiblilty to change the number of needed instances by just one setting. So if you want to have 4 instances, used by pound, just enter the number 4. If you need 10 instances enter the number 10 (via the backends setting in the [config] part).
 
 # Example: Development environment
 
@@ -35,3 +36,18 @@ todo: pdbdebugmode
 
 # run bootstrap with the develop.cfg
 > ./bin/buildout -c develop.cfg
+
+
+# Example: Deployment with single instance
+
+* copy deploy-single.cfg to deploy.cfg
+* make edits if needed
+* change fabfile as you need
+* deploy via ./bin/fabric deploy_something
+
+# Example: Deployment with multiple instances
+
+* copy deploy-multi.cfg to deploy.cfg
+* change the number of instances if needed
+* change fabfile as you need
+* deploy via ./bin/fabric deploy_something
