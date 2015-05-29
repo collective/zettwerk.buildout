@@ -3,7 +3,7 @@ Enhanced template buildout configurations for development and deployment.
 
 # Features
 
-* Included batteries
+* Development environment
  * plone.api
  * bobtemptlates.plone
  * Products.PrintingMailhost
@@ -12,13 +12,18 @@ Enhanced template buildout configurations for development and deployment.
  * zettwerk.i18nduder
  * fabric
  * collective.xmltestreport
- * missingbits (adapted to work with current buildout versions)
  * mr.developer enabled
  * collective.recipe.omelette
  * plone.reload
 
+* Deployment environment
+ * missingbits + mr.scripty: set the numbers of instances by one setting
+ * zeoserver
+ * pound
+ * supervisor
 
-# Structure
+
+# Note
 
 One neat thing in this buildout templates is the possiblilty to change the number of needed instances by just one setting. So if you want to have 4 instances, used by pound, just enter the number 4. If you need 10 instances enter the number 10 (via the backends setting in the [config] part).
 
@@ -57,4 +62,7 @@ Run bootstrap with the develop.cfg
 
 # Todos:
 * zest.releaser
-* code quality stuff
+* plone.recipe.codeanalysis
+* replace pound with haproxy
+* grip? (markdown rendering)
+* more examples and documentation
