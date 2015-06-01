@@ -48,4 +48,3 @@ def transfer_buildout():
     put("deploy-base.cfg", "%(targetProjectDir)s/deploy-base.cfg" % (env))
     put("buildout.cfg", "%(targetProjectDir)s/buildout.cfg" % (env))
     put("%(deploy_cfg)s" % (env), "%(targetProjectDir)s/deploy.cfg" % (env))
-    put("bootstrap.py", "%(targetProjectDir)s/bootstrap.py" % (env))
