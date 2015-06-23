@@ -35,7 +35,7 @@ One neat thing in this buildout templates is the possiblilty to change the numbe
 
 # Setup your new buildout/project root:
 
-    cd zettwerk.build
+    cd zettwerk.buildout
     git checkout-index -f -a --prefix=/path/to/your/project/
 
 _Be sure to enter the last path separator!_
