@@ -69,5 +69,4 @@ Run bootstrap with the develop.cfg
 # Todos:
 * zest.releaser
 * replace pound with haproxy
-* grip? (markdown rendering)
 * more examples and documentation
