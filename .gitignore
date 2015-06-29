@@ -18,3 +18,5 @@ var/
 .installed.cfg
 
 src/*/*.egg-info/
+
+.idea/
